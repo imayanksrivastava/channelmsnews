@@ -6,7 +6,6 @@ const instance = axios.create(
     {
         // baseURL: `${proxyUrl}https://newsapi.org/v2/`
         baseURL: `https://newsapi.org/v2/`
-
     }
 );
 
