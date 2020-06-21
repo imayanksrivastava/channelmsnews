@@ -4,7 +4,6 @@ import { Route, Switch } from "react-router-dom";
 import "./App.css";
 import Clock from "./components/clock";
 import Date from "./components/date";
-// import BreakingNews from "./components/home";
 import Category from "./components/Category";
 import MyAccount from "./components/MyAccount";
 import Search from "./components/Search";

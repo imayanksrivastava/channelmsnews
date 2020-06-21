@@ -25,7 +25,7 @@ export default function sidemenu(props) {
           <li>
             <Link
               to={{
-                pathname: "/category/Business",
+                pathname: "/category/business",
                 state: { fromNav: true },
               }}
             >
@@ -35,7 +35,7 @@ export default function sidemenu(props) {
           <li>
             <Link
               to={{
-                pathname: "/category/Sports",
+                pathname: "/category/sports",
                 state: { fromNav: true },
               }}
             >
@@ -45,14 +45,14 @@ export default function sidemenu(props) {
           <li>
             <Link 
               to={{
-                pathname: "/category/Technology", 
+                pathname: "/category/technology", 
                 state: {fromNav: true},
             }}>Technology</Link>
           </li>
           <li>
             <Link 
               to={{
-                pathname:"/category/Science",
+                pathname:"/category/science",
                 state: {fromNav: true},
             }}
               >Science</Link>
@@ -60,9 +60,16 @@ export default function sidemenu(props) {
           <li>
             <Link 
               to={{
-                pathname:"/category/Health",
+                pathname:"/category/health",
                 state: {fromNav: true},
             }}>Health</Link>
+          </li>
+          <li>
+            <Link 
+              to={{
+                pathname:"/category/movie",
+                state: {fromNav: true},
+            }}>Movies</Link>
           </li>
         </ul>
         <p className="menu-label">Settings</p>

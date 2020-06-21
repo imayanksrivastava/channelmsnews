@@ -9,39 +9,36 @@ export default class Category extends React.PureComponent {
 
   componentDidMount = () => {
     let categoryName = this.props.match.params.CategoryName;
-    console.log(this.props);
+    console.log(categoryName);
     newsApi
       .get(
-        `top-headlines?country=GB&category=${categoryName}&pageSize=12&apiKey=8f47a48a41494480b72c7e5102db18ce`
+        `latest-news?&category=${categoryName}&apiKey=UUHD9_vdN_hGwCKvpDNsGIzoU0uuET-BvAq2px1h5LjCcUiq`
       )
       .then((response) => {
-        console.log(response);
         if (response.status === 200) {
           this.props.history.replace({
             state: { fromNav: false },
           });
-          this.setState({ news: response.data.articles });
+          this.setState({ news: response.data.news });
         }
       })
       .catch((error) => console.log(error));
   };
 
   componentDidUpdate = (prevProps, prevState) => {
-    console.log(this.props);
     let currCategory = this.props.match.params.CategoryName;
     if (this.props.location.state.fromNav === true) {
       newsApi
         .get(
-          `top-headlines?country=GB&category=${currCategory}&pageSize=12&apiKey=8f47a48a41494480b72c7e5102db18ce`
+          `latest-news?&category=${currCategory}&apiKey=UUHD9_vdN_hGwCKvpDNsGIzoU0uuET-BvAq2px1h5LjCcUiq`
         ) 
 
         .then((response) => {
-          console.log(response);
           if (response.status === 200) {
             this.props.history.replace({
               state: { fromNav: false },
             });
-            this.setState({ news: response.data.articles });
+            this.setState({ news: response.data.news });
           }
         })
         .catch((error) => console.log(error));
