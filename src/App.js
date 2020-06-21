@@ -15,13 +15,18 @@ import Regions from "./components/Region";
 
 import "bulma/css/bulma.css";
 
+
+console.log(process.env.REACT_APP_CURRENTS_API_KEY)
 export default class App extends Component {
+
+
   state = {
     news: [],
     selectedRegion: "US",
     selectedCategory: "BreakingNews"
   };
 
+  
   componentDidMount = () => {
     this.getfrmnewsAPI(this.state.selectedCategory);
   };
@@ -32,7 +37,7 @@ export default class App extends Component {
     let reqURL = "";
     switch (categoryName) {
       case "BreakingNews":
-        reqURL = `latest-news?country=${this.state.selectedRegion}&apiKey=OAdDagQTqC8ftlJ2AEk3R-XxRwebtZ7stTLiiBwt3-1ybyPu`;
+        reqURL = `latest-news?country=${this.state.selectedRegion}&apiKey=${process.env.REACT_APP_CURRENTS_API_KEY}`;
       break;
 
       case "business":
@@ -41,11 +46,11 @@ export default class App extends Component {
       case "science":  
       case "health":
       case "movies":
-        reqURL = `latest-news?country=${this.state.selectedRegion}&category=${categoryName}&apiKey=OAdDagQTqC8ftlJ2AEk3R-XxRwebtZ7stTLiiBwt3-1ybyPu`
+        reqURL = `latest-news?country=${this.state.selectedRegion}&category=${categoryName}&apiKey=${process.env.REACT_APP_CURRENTS_API_KEY}`
       break;
       
       default:
-        reqURL = `search?country=${this.state.selectedRegion}&keywords=${categoryName}&apiKey=OAdDagQTqC8ftlJ2AEk3R-XxRwebtZ7stTLiiBwt3-1ybyPu`;
+        reqURL = `search?country=${this.state.selectedRegion}&keywords=${categoryName}&apiKey=${process.env.REACT_APP_CURRENTS_API_KEY}`;
     }
 
     newsApi

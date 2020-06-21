@@ -11,7 +11,7 @@ export default class Category extends React.PureComponent {
     let categoryName = this.props.match.params.CategoryName;
     newsApi
       .get(
-        `latest-news?country=${this.props.selectedRegion}&category=${categoryName}&apiKey=UUHD9_vdN_hGwCKvpDNsGIzoU0uuET-BvAq2px1h5LjCcUiq`
+        `latest-news?country=${this.props.selectedRegion}&category=${categoryName}&apiKey=${process.env.REACT_APP_CURRENTS_API_KEY}`
       )
       .then((response) => {
         if (response.status === 200) {
@@ -29,7 +29,7 @@ export default class Category extends React.PureComponent {
     if (this.props.location.state.fromNav === true) {
       newsApi
         .get(
-          `latest-news?country=${this.props.selectedRegion}&category=${currCategory}&apiKey=UUHD9_vdN_hGwCKvpDNsGIzoU0uuET-BvAq2px1h5LjCcUiq`
+          `latest-news?country=${this.props.selectedRegion}&category=${currCategory}&apiKey=${process.env.REACT_APP_CURRENTS_API_KEY}`
         ) 
 
         .then((response) => {
