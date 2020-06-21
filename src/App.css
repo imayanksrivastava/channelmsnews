@@ -170,7 +170,12 @@ input.input.search-bar {
 }
 
 /* Media Query for Mobile and Tablet */
-@media screen and (max-width: 411px) {
+/* @media screen and (max-width: 411px) */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+{
   .weather {
     color: white;
     position: absolute;
@@ -308,4 +313,99 @@ input.input.search-bar {
     font-family: Trebuchet MS;
     font-weight: bold;
   }
+}
+
+
+/* Iphone 5 */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .weather {
+      color: white;
+      position: absolute;
+      margin-left: 25px;
+      margin-top: 5px;
+      left: 52%;
+      font-size: 15px;
+      font-family: Trebuchet MS;
+      font-weight: bold;
+    }
+  
+    .short-app-name {
+      display: inline-block;
+      background-color: #123c69;
+      font-size: 30px;
+      color: white;
+      font-weight: bold;
+      margin-left: 15%;
+      font-family: Trebuchet MS;
+      margin-top: 10px;
+    }
+    .smallClock {
+      display: inline-block;
+      color: white;
+      font-family: Trebuchet MS;
+      margin-left: 2%;
+      font-size: 15px;
+      font-weight: bold;
+    }
+  
+    .app-name {
+      display: none;
+    }
+  
+    .clock {
+      display: none;
+    }
+  
+    .search-bar {
+      position: absolute;
+      top: 96px;
+      left: 180px;
+    }
+    input.input.search-bar {
+      height: 29px;
+      width: 50%;
+    }
+  
+    .card {
+      margin-left: 20px;
+      margin-right: 20px;
+      width: 320px;
+      height: auto;
+      margin-top: 70px
+    }
+    .div-menu-item {
+      display: none;
+    }
+    .vl {
+      border-left: 2px solid whitesmoke;
+      height: 34px;
+      position: absolute;
+      left: 16%;
+      margin-left: -3px;
+      top: 10;
+    }
+  
+    .vl1 {
+      display: none;
+    }
+  
+    .vl {
+      display: none;
+    }
+  
+    .region{
+      position: absolute;
+      margin-left: 1px;
+      left: 1%;
+      font-size: 15px;
+      font-family: Trebuchet MS;
+      font-weight: bold;
+      margin-top: 40px;
+    }
+
 }
