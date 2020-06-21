@@ -33,7 +33,7 @@ export default class App extends Component {
         reqURL = `latest-news?country=${this.state.selectedRegion}&apiKey=UUHD9_vdN_hGwCKvpDNsGIzoU0uuET-BvAq2px1h5LjCcUiq`
       break;
       default:
-        reqURL = `search?keywords=${categoryName}&apiKey=UUHD9_vdN_hGwCKvpDNsGIzoU0uuET-BvAq2px1h5LjCcUiq`
+        reqURL = `search?country=${this.state.selectedRegion}&keywords=${categoryName}&apiKey=UUHD9_vdN_hGwCKvpDNsGIzoU0uuET-BvAq2px1h5LjCcUiq`
     }
     
     newsApi

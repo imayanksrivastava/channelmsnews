@@ -29,7 +29,7 @@ export default class Region extends React.Component {
     return (
       <div className="field">
         <div className="control">
-          <div className="select">
+          <div className="select is-small">
             <select>{regionsList})</select>
           </div>
         </div>
