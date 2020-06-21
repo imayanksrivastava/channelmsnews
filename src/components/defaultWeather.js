@@ -11,7 +11,7 @@ export default class App extends Component {
   componentDidMount = () => {
     weatherApi
       .get(
-        "data/2.5/weather?q=Netherlands&units=metric&appid=17652cc8c7de11ae1f955cc6761f37f5"
+        `data/2.5/weather?q=Netherlands&units=metric&appid=${process.env.REACT_APP_WEATHER_API_KEY}`
       )
       .then((response) => {
         if (response.status === 200) {

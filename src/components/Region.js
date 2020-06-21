@@ -8,7 +8,7 @@ export default class Region extends React.Component {
   componentDidMount = () => {
     newsApi
       .get(
-        `available/regions?apiKey=UUHD9_vdN_hGwCKvpDNsGIzoU0uuET-BvAq2px1h5LjCcUiq`
+        `available/regions?apiKey=${process.env.REACT_APP_CURRENTS_API_KEY}`
       )
       .then((response) => {
 
