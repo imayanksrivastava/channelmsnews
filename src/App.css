@@ -211,7 +211,7 @@ input.input.search-bar {
 
   .search-bar {
     position: absolute;
-    top: 40px;
+    top: 100px;
     left: 180px;
   }
   input.input.search-bar {
