@@ -211,7 +211,7 @@ input.input.search-bar {
 
   .search-bar {
     position: absolute;
-    top: 15px;
+    top: 30px;
     left: 180px;
   }
   input.input.search-bar {
@@ -224,7 +224,7 @@ input.input.search-bar {
     margin-right: 20px;
     width: 320px;
     height: auto;
-    margin-top: 60px
+    margin-top: 70px
   }
   .div-menu-item {
     display: none;
