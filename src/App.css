@@ -211,11 +211,11 @@ input.input.search-bar {
 
   .search-bar {
     position: absolute;
-    top: 120px;
-    left: 100px;
+    top: 15px;
+    left: 180px;
   }
   input.input.search-bar {
-    height: 25px;
+    height: 29px;
     width: 50%;
   }
 
@@ -224,6 +224,7 @@ input.input.search-bar {
     margin-right: 20px;
     width: 320px;
     height: auto;
+    margin-top: 60px
   }
   .div-menu-item {
     display: none;
@@ -244,6 +245,16 @@ input.input.search-bar {
   .vl {
     display: none;
   }
+
+  .region{
+    position: absolute;
+    margin-left: 1px;
+    left: 1%;
+    font-size: 15px;
+    font-family: Trebuchet MS;
+    font-weight: bold;
+    margin-top: 40px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -254,6 +265,18 @@ input.input.search-bar {
   .vl {
     display: none;
   }
+
+  .region{
+    position: absolute;
+    margin-left: 1px;
+    left:1%;
+    font-size: 15px;
+    font-family: Trebuchet MS;
+    font-weight: bold;
+    margin-top: 40px;
+  }
+
+
 }
 
 @media screen and (max-width: 1024px) {
