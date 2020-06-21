@@ -170,11 +170,7 @@ input.input.search-bar {
 }
 
 /* Media Query for Mobile and Tablet */
-/* @media screen and (max-width: 411px) */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3)
+@media screen and (max-width: 812px)
 {
   .weather {
     color: white;
