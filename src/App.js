@@ -16,7 +16,6 @@ import Regions from "./components/Region";
 import "bulma/css/bulma.css";
 
 
-console.log(process.env.REACT_APP_CURRENTS_API_KEY)
 export default class App extends Component {
 
 
