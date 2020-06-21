@@ -11,7 +11,8 @@ import Region from "./components/Region"
 import SideMenu from "./components/sidemenu";
 import newsApi from "./apis/newsApi";
 import Weather from "./components/defaultWeather";
-import News from "./components/News"
+import News from "./components/News";
+import Regions from "./components/Region";
 
 import "bulma/css/bulma.css";
 
@@ -69,6 +70,9 @@ getdatabyCategory = (e) => {
             <div>
               <span className="short-app-name">CHANNEL MS NEWS</span>
             </div>
+            <div>
+              <Regions />
+            </div>
             <div className="weather">
               <Weather />
             </div>
@@ -88,7 +92,6 @@ getdatabyCategory = (e) => {
           </Route>
           <Route path="/category/:CategoryName" component={Category} />
           <Route path="/myaccount" component={MyAccount} />
-          <Route path="/region" component={Region} />
         </Switch>
         <div>
           <SideMenu newsCategory={this.getdatabyCategory}/>

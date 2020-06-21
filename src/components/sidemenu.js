@@ -75,9 +75,6 @@ export default function sidemenu(props) {
         <p className="menu-label">Settings</p>
         <ul className="menu-list">
           <li>
-            <Link to="/Region">My Home</Link>
-          </li>
-          <li>
             <Link to="/myaccount">My Account</Link>
           </li>
           <li>
