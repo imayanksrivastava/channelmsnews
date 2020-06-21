@@ -8,8 +8,8 @@ export default function News(props) {
         {props.news.map((news) => (
           <div className="card media-left is-0-mobile is-1-desktop">
             <div>
-              {news.urlToImage ?
-              <img className="beers" src={news.urlToImage} alt="news"></img>
+              {news.image !== 'None' ?
+              <img className="beers" src={news.image} alt="news"></img>
               :<img className="beers" src="/images/default.png" alt="news"></img>
             }
             </div>
@@ -28,10 +28,10 @@ export default function News(props) {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        {news.source.name}[+]
+                        {news.author}[+]
                       </a>
                     </div>
-                    <div className="news-date">{news.publishedAt}</div>
+                    <div className="news-date">{news.published}</div>
                   </div>
                 </div>
               </div>
