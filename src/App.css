@@ -159,6 +159,16 @@ input.input.search-bar {
   margin-top: 6px;
 }
 
+.region{
+  position: absolute;
+  margin-left: -15px;
+  left: 70%;
+  font-size: 15px;
+  font-family: Trebuchet MS;
+  font-weight: bold;
+  margin-top: 6px;
+}
+
 /* Media Query for Mobile and Tablet */
 @media screen and (max-width: 411px) {
   .weather {

@@ -94,8 +94,8 @@ export default class App extends Component {
             <div>
               <span className="short-app-name">CHANNEL MS NEWS</span>
             </div>
-            <div>
-              <Regions userRegion = {this.userRegion}/>
+            <div className ="region">
+              <Regions  userRegion = {this.userRegion}/>
             </div>
             <div className="weather">
               <Weather />
