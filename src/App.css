@@ -326,10 +326,10 @@ input.input.search-bar {
     .weather {
       color: white;
       position: absolute;
-      margin-left: 25px;
+      margin-left: 20px;
       margin-top: 5px;
-      left: 52%;
-      font-size: 15px;
+      left: 54%;
+      font-size: 12px;
       font-family: Trebuchet MS;
       font-weight: bold;
     }
@@ -340,7 +340,7 @@ input.input.search-bar {
       font-size: 30px;
       color: white;
       font-weight: bold;
-      margin-left: 15%;
+      margin-left: 8%;
       font-family: Trebuchet MS;
       margin-top: 10px;
     }
@@ -349,7 +349,7 @@ input.input.search-bar {
       color: white;
       font-family: Trebuchet MS;
       margin-left: 2%;
-      font-size: 15px;
+      font-size: 12px;
       font-weight: bold;
     }
   
@@ -368,15 +368,16 @@ input.input.search-bar {
     }
     input.input.search-bar {
       height: 29px;
-      width: 50%;
+      width: 40%;
     }
   
     .card {
-      margin-left: 20px;
-      margin-right: 20px;
-      width: 320px;
+      padding-left: 20px;
+      padding-right: 0px;
+      width: 300px;
       height: auto;
-      margin-top: 70px
+      margin-top: 70px;
+      margin-left: 10px;
     }
     .div-menu-item {
       display: none;
