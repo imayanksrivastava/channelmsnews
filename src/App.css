@@ -174,7 +174,7 @@ input.input.search-bar {
 
   .short-app-name {
     display: inline-block;
-    background-color: #990000;
+    background-color: #123c69;
     font-size: 30px;
     color: white;
     font-weight: bold;
@@ -211,7 +211,7 @@ input.input.search-bar {
 
   .card {
     margin-left: 20px;
-    margin-right: 40px;
+    margin-right: 20px;
     width: 320px;
     height: auto;
   }
