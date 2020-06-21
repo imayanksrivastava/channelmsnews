@@ -312,10 +312,10 @@ input.input.search-bar {
 }
 
 
-/* Iphone 5 */
+/* Iphone 5
 
 /* Portrait and Landscape */
-@media only screen 
+/* @media only screen 
   and (min-device-width: 320px) 
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2) {
@@ -405,4 +405,4 @@ input.input.search-bar {
       margin-top: 40px;
     }
 
-}
+}  */
