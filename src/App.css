@@ -201,7 +201,7 @@ input.input.search-bar {
 
   .search-bar {
     position: absolute;
-    top: 50px;
+    top: 100px;
     left: 100px;
   }
   input.input.search-bar {
@@ -210,7 +210,7 @@ input.input.search-bar {
   }
 
   .card {
-    margin-left: 10px;
+    margin-left: 20px;
     margin-right: 50px;
     width: 320px;
     height: auto;
