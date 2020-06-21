@@ -19,10 +19,22 @@ export default class Region extends React.Component {
       .catch((error) => console.log(error));
   };
 
+  
+  onSelectChange = event => {
+    var region = document.getElementById("region").value;
+    console.log(region);
+    this.props.userRegion(region)
+  };
+
   render() {
     var regions = this.state.regions;
     var regionsList = Object.keys(regions).sort().map(function (key) {
-      return <option key= {key} value={regions[key]}>{key}</option>;
+      if (key ==='US'){
+        
+      }
+      return <option
+        key= {key} value={regions[key]}>{key}
+      </option>;
     });
 
 
@@ -30,7 +42,9 @@ export default class Region extends React.Component {
       <div className="field">
         <div className="control">
           <div className="select is-small">
-            <select>{regionsList})</select>
+            <select id ="region"
+            onChange = {this.onSelectChange}
+            >{regionsList})</select>
           </div>
         </div>
       </div>

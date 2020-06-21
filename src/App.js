@@ -15,48 +15,74 @@ import Regions from "./components/Region";
 
 import "bulma/css/bulma.css";
 
-
 export default class App extends Component {
   state = {
     news: [],
-    selectedRegion: 'US'
+    selectedRegion: "US",
+    selectedCategory: "BreakingNews"
   };
 
   componentDidMount = () => {
-    this.getfrmnewsAPI('BreakingNews');
+    this.getfrmnewsAPI(this.state.selectedCategory);
   };
+
+
 
   getfrmnewsAPI = (categoryName) => {
-    let reqURL = '';
-    switch(categoryName) {
-      case 'BreakingNews':
-        reqURL = `latest-news?country=${this.state.selectedRegion}&apiKey=UUHD9_vdN_hGwCKvpDNsGIzoU0uuET-BvAq2px1h5LjCcUiq`
+    console.log(this.state.selectedRegion)
+    let reqURL = "";
+    switch (categoryName) {
+      case "BreakingNews":
+        reqURL = `latest-news?country=${this.state.selectedRegion}&apiKey=OAdDagQTqC8ftlJ2AEk3R-XxRwebtZ7stTLiiBwt3-1ybyPu`;
       break;
-      default:
-        reqURL = `search?country=${this.state.selectedRegion}&keywords=${categoryName}&apiKey=UUHD9_vdN_hGwCKvpDNsGIzoU0uuET-BvAq2px1h5LjCcUiq`
-    }
-    
-    newsApi
-    .get(
-      reqURL
-    )
-    .then((response) => {
-      if (response.status === 200) {
-        this.setState({ news: response.data.news});
-      }
-    })
-    .catch((error) => console.log(error));
-} 
 
-getdatabyCategory = (e) => {
-  e.preventDefault() 
-  let categoryName = e.target.getAttribute('href');
-  this.getfrmnewsAPI(categoryName) 
-}
+      case "business":
+      case "sports":
+      case "technology":
+      case "science":  
+      case "health":
+      case "movies":
+        reqURL = `latest-news?country=${this.state.selectedRegion}&category=${categoryName}&apiKey=OAdDagQTqC8ftlJ2AEk3R-XxRwebtZ7stTLiiBwt3-1ybyPu`
+      break;
+      
+      default:
+        reqURL = `search?country=${this.state.selectedRegion}&keywords=${categoryName}&apiKey=OAdDagQTqC8ftlJ2AEk3R-XxRwebtZ7stTLiiBwt3-1ybyPu`;
+    }
+
+    newsApi
+      .get(reqURL)
+      .then((response) => {
+        if (response.status === 200) {
+          this.setState({ news: response.data.news });
+        }
+      })
+      .catch((error) => console.log(error));
+  };
+
+  getdatabyCategory = (e) => {
+    e.preventDefault();
+    let categoryName = e.target.getAttribute("href");
+    this.setState({selectedCategory:categoryName }, () => {
+      this.getfrmnewsAPI(categoryName);
+    })
+    console.log(this.state.selectedCategory)
+    console.log(categoryName)
+  };
 
   userSearch = (userSearchInput) => {
-    this.getfrmnewsAPI(userSearchInput)
+    this.getfrmnewsAPI(userSearchInput);
   };
+
+  userRegion = (selRegion) => {
+    // this.setState ({selectedRegion: selRegion })
+    let categoryName = this.props;
+    console.log(categoryName)
+    this.setState({selectedRegion: selRegion}, () => {
+      this.getfrmnewsAPI(this.state.selectedCategory);
+    });
+  }
+
+
 
   render() {
     return (
@@ -69,7 +95,7 @@ getdatabyCategory = (e) => {
               <span className="short-app-name">CHANNEL MS NEWS</span>
             </div>
             <div>
-              <Regions />
+              <Regions userRegion = {this.userRegion}/>
             </div>
             <div className="weather">
               <Weather />
@@ -88,11 +114,14 @@ getdatabyCategory = (e) => {
           <Route exact path="/">
             <News news={this.state.news} />
           </Route>
-          <Route path="/category/:CategoryName" component={Category} />
+          <Route
+            path="/category/:CategoryName"
+            render={(props) => <Category {...props} selectedRegion={this.state.selectedRegion} />}
+          />
           <Route path="/myaccount" component={MyAccount} />
         </Switch>
         <div>
-          <SideMenu newsCategory={this.getdatabyCategory}/>
+          <SideMenu newsCategory={this.getdatabyCategory} />
         </div>
       </div>
     );
