@@ -7,7 +7,6 @@ import Date from "./components/date";
 import Category from "./components/Category";
 import MyAccount from "./components/MyAccount";
 import Search from "./components/Search";
-import Region from "./components/Region"
 import SideMenu from "./components/sidemenu";
 import newsApi from "./apis/newsApi";
 import Weather from "./components/defaultWeather";
@@ -20,6 +19,7 @@ import "bulma/css/bulma.css";
 export default class App extends Component {
   state = {
     news: [],
+    selectedRegion: 'US'
   };
 
   componentDidMount = () => {
@@ -30,7 +30,7 @@ export default class App extends Component {
     let reqURL = '';
     switch(categoryName) {
       case 'BreakingNews':
-        reqURL = `latest-news?apiKey=UUHD9_vdN_hGwCKvpDNsGIzoU0uuET-BvAq2px1h5LjCcUiq`
+        reqURL = `latest-news?country=${this.state.selectedRegion}&apiKey=UUHD9_vdN_hGwCKvpDNsGIzoU0uuET-BvAq2px1h5LjCcUiq`
       break;
       default:
         reqURL = `search?keywords=${categoryName}&apiKey=UUHD9_vdN_hGwCKvpDNsGIzoU0uuET-BvAq2px1h5LjCcUiq`
@@ -41,9 +41,7 @@ export default class App extends Component {
       reqURL
     )
     .then((response) => {
-      console.log(response);
       if (response.status === 200) {
-        console.log(response)
         this.setState({ news: response.data.news});
       }
     })

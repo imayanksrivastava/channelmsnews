@@ -1,12 +1,11 @@
 import React from "react";
 
 export default function News(props) {
-  console.log(props);
   return (
     <div>
       <div className="columns is-multiline div-news-cards">
         {props.news.map((news) => (
-          <div className="card media-left is-0-mobile is-1-desktop">
+          <div key={news.id} className="card media-left is-0-mobile is-1-desktop">
             <div>
               {news.image !== 'None' ?
               <img className="beers" src={news.image} alt="news"></img>

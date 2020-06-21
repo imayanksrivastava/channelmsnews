@@ -14,13 +14,11 @@ export default class App extends Component {
         "data/2.5/weather?q=Netherlands&units=metric&appid=17652cc8c7de11ae1f955cc6761f37f5"
       )
       .then((response) => {
-        console.log(response.data);
         if (response.status === 200) {
           this.setState({ 
             defaultweather: response.data.main,
             location: response.data.name
           });
-          console.log(this.state)
         }
       })
       .catch((error) => console.log(error));
