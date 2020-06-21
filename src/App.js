@@ -29,7 +29,6 @@ export default class App extends Component {
 
 
   getfrmnewsAPI = (categoryName) => {
-    console.log(this.state.selectedRegion)
     let reqURL = "";
     switch (categoryName) {
       case "BreakingNews":
@@ -65,8 +64,6 @@ export default class App extends Component {
     this.setState({selectedCategory:categoryName }, () => {
       this.getfrmnewsAPI(categoryName);
     })
-    console.log(this.state.selectedCategory)
-    console.log(categoryName)
   };
 
   userSearch = (userSearchInput) => {

@@ -47,7 +47,6 @@ export default class Category extends React.PureComponent {
   on
 
   render() {
-    console.log(this.props)
     return (
       <div>
         <News news={this.state.news} />
