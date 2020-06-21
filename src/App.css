@@ -144,7 +144,7 @@ input.input.search-bar {
   height: 34px;
   position: absolute;
   left: 88.3%;
-  margin-left: -14px;
+  margin-left: -33px;
   top: 20px;
 }
 
@@ -152,7 +152,7 @@ input.input.search-bar {
   color: white;
   position: absolute;
   margin-left: -15px;
-  left: 80%;
+  left: 18%;
   font-size: 15px;
   font-family: Trebuchet MS;
   font-weight: bold;
@@ -162,7 +162,7 @@ input.input.search-bar {
 .region{
   position: absolute;
   margin-left: -15px;
-  left: 70%;
+  left: 77%;
   font-size: 15px;
   font-family: Trebuchet MS;
   font-weight: bold;
