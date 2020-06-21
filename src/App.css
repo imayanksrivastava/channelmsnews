@@ -201,17 +201,17 @@ input.input.search-bar {
 
   .search-bar {
     position: absolute;
-    top: 100px;
+    top: 120px;
     left: 100px;
   }
   input.input.search-bar {
-    height: 10px;
+    height: 20px;
     width: 50%;
   }
 
   .card {
     margin-left: 20px;
-    margin-right: 50px;
+    margin-right: 40px;
     width: 320px;
     height: auto;
   }
