@@ -29,17 +29,13 @@ export default class App extends Component {
   getfrmnewsAPI = (categoryName) => {
     let reqURL = '';
     switch(categoryName) {
-      case 'blacklivesmatter':
-      case 'covid':
-        //  reqURL = `everything?q=${categoryName}&sortBy=publishedAt&apiKey=8f47a48a41494480b72c7e5102db18ce`
-        break;
       case 'BreakingNews':
         reqURL = `latest-news?apiKey=UUHD9_vdN_hGwCKvpDNsGIzoU0uuET-BvAq2px1h5LjCcUiq`
-        // reqURL = `top-headlines?country=GB&pageSize=12&apiKey=8f47a48a41494480b72c7e5102db18ce`
       break;
       default:
-        // reqURL = `top-headlines?country=GB&pageSize=12&apiKey=8f47a48a41494480b72c7e5102db18ce`
+        reqURL = `search?keywords=${categoryName}&apiKey=UUHD9_vdN_hGwCKvpDNsGIzoU0uuET-BvAq2px1h5LjCcUiq`
     }
+    
     newsApi
     .get(
       reqURL
@@ -61,17 +57,7 @@ getdatabyCategory = (e) => {
 }
 
   userSearch = (userSearchInput) => {
-    newsApi
-      .get(
-        `everything?q=${userSearchInput}&sortBy=publishedAt&apiKey=8f47a48a41494480b72c7e5102db18ce`
-      )
-      .then((response) => {
-        console.log(response);
-        if (response.status === 200) {
-          this.setState({ news: response.data.articles });
-        }
-      })
-      .catch((error) => console.log(error));
+    this.getfrmnewsAPI(userSearchInput)
   };
 
   render() {

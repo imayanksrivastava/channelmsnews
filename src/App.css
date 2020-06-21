@@ -31,8 +31,8 @@
 }
 
 input.input.search-bar {
-  height: 50%;
-  width: 10%;
+  height: 40px;
+  width: 200px;
 }
 
 .short-app-name {
@@ -127,7 +127,7 @@ input.input.search-bar {
   margin-left: 20px;
   float: left;
   margin-right: 5px;
-  margin-top: 80px;
+  margin-top: 0px;
 }
 
 .vl {
