@@ -44,10 +44,13 @@ export default class App extends Component {
       case "technology":
       case "science":  
       case "health":
-      case "movies":
         reqURL = `latest-news?country=${this.state.selectedRegion}&category=${categoryName}&apiKey=${process.env.REACT_APP_CURRENTS_API_KEY}`
       break;
-      
+
+      case "movies":
+        reqURL = `search?country=${this.state.selectedRegion}&keywords=${categoryName}&apiKey=${process.env.REACT_APP_CURRENTS_API_KEY}`;
+      break;
+
       default:
         reqURL = `search?country=${this.state.selectedRegion}&keywords=${categoryName}&apiKey=${process.env.REACT_APP_CURRENTS_API_KEY}`;
     }
