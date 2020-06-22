@@ -8,7 +8,7 @@ export default function sidemenu(props) {
         <p className="menu-label">General</p>
         <ul className="menu-list">
           <li>
-          <a href="BreakingNews" onClick ={props.newsCategory}>Trending News</a>
+          <a href="BreakingNews" onClick ={props.newsCategory}>#TrendingNews</a>
           </li>
           <li>
           <a href="covid-19" onClick ={props.newsCategory}>#COVD19</a> 
