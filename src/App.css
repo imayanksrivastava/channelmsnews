@@ -1,3 +1,4 @@
+
 .level .app-name {
   background-color: #123c69;
   font-size: 30px;
@@ -9,6 +10,7 @@
 }
 
 .App-header {
+  min-width: 200px;
   background-color: #123c69;
   min-height: 70px;
   flex-direction: row;
@@ -54,6 +56,7 @@ input.input.search-bar {
   font-weight: bold;
   color: white;
   margin-top: 14px;
+  flex-basis: auto;
 }
 
 .read-more {
@@ -131,11 +134,11 @@ input.input.search-bar {
 }
 
 .vl {
+  position: absolute;
   border-left: 2px solid whitesmoke;
   height: 34px;
-  position: absolute;
   left: 16%;
-  margin-left: -3px;
+  margin-left: 5px;
   top: 20px;
 }
 
@@ -144,7 +147,7 @@ input.input.search-bar {
   height: 34px;
   position: absolute;
   left: 88.3%;
-  margin-left: -33px;
+  margin-left: auto;
   top: 20px;
 }
 
@@ -157,6 +160,7 @@ input.input.search-bar {
   font-family: Trebuchet MS;
   font-weight: bold;
   margin-top: 6px;
+  margin-left: 1px;
 }
 
 .region{
@@ -168,6 +172,16 @@ input.input.search-bar {
   font-weight: bold;
   margin-top: 6px;
 }
+
+/* @media screen and (min-width: 500px) {
+  body {
+    width: 420px
+  }
+} */
+
+
+
+
 
 /* Media Query for Mobile and Tablet */
 @media screen and (max-width: 411px)
@@ -258,7 +272,7 @@ input.input.search-bar {
   }
 }
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .vl1 {
     display: none;
   }
@@ -278,9 +292,9 @@ input.input.search-bar {
   }
 
 
-}
-
-@media screen and (max-width: 1024px) {
+} */
+/* 
+@media screen and (min-width: 500px) {
   .vl1 {
     border-left: 2px solid whitesmoke;
     height: 34px;
@@ -309,7 +323,7 @@ input.input.search-bar {
     font-family: Trebuchet MS;
     font-weight: bold;
   }
-}
+} */
 
 
 /* Iphone 5
