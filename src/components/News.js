@@ -1,8 +1,17 @@
 import React from "react";
 
+import ClockLoader from "react-spinners/FadeLoader"; 
+import PublishedAt from "./PublishedAt";
+
 export default function News(props) {
   return (
     <div>
+      <div  className = "clockLoader">
+      <ClockLoader
+        size={40}
+        color={"#123c69"}
+        loading={props.isLoading}
+      /></div>
       <div className="columns is-multiline div-news-cards">
         {props.news.map((news) => (
           <div key={news.id} className="card media-left is-0-mobile is-1-desktop">
@@ -30,7 +39,8 @@ export default function News(props) {
                         {news.author}[+]
                       </a>
                     </div>
-                    <div className="news-date">{news.published}</div>
+                      <PublishedAt publishedDate = {news.published}
+                      />
                   </div>
                 </div>
               </div>

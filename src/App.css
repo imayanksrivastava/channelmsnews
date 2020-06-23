@@ -9,6 +9,10 @@
   margin-top: 14px;
 }
 
+.clockLoader {
+  margin-left: 50%
+}
+
 .App-header {
   min-width: 200px;
   background-color: #123c69;

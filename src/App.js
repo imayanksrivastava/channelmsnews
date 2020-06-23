@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
 
+
 import "./App.css";
 import Clock from "./components/clock";
 import Date from "./components/date";
@@ -22,7 +23,8 @@ export default class App extends Component {
   state = {
     news: [],
     selectedRegion: "US",
-    selectedCategory: "BreakingNews"
+    selectedCategory: "BreakingNews",
+    isLoading: true
   };
 
   
@@ -34,6 +36,7 @@ export default class App extends Component {
 
   getfrmnewsAPI = (categoryName) => {
     let reqURL = "";
+    this.setState({isLoading: true});
     switch (categoryName) {
       case "BreakingNews":
         reqURL = `latest-news?country=${this.state.selectedRegion}&apiKey=${process.env.REACT_APP_CURRENTS_API_KEY}`;
@@ -59,7 +62,8 @@ export default class App extends Component {
       .get(reqURL)
       .then((response) => {
         if (response.status === 200) {
-          this.setState({ news: response.data.news });
+          this.setState({ news: response.data.news, isLoading: false});
+  
         }
       })
       .catch((error) => console.log(error));
@@ -116,7 +120,7 @@ export default class App extends Component {
         <Search onSearchSubmit={this.userSearch} />
         <Switch>
           <Route exact path="/">
-            <News news={this.state.news} />
+            <News news={this.state.news} isLoading = {this.state.isLoading} />
           </Route>
           <Route
             path="/category/:CategoryName"
