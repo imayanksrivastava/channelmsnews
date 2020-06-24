@@ -235,7 +235,7 @@ input.input.search-bar {
   .search-bar {
     /* min-height: 10px; */
     /* position: absolute; */
-    margin-top: 5px;
+    margin-top: 1px;
     left: 180px;
   }
   input.input.search-bar {
