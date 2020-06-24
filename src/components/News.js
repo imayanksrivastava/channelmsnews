@@ -26,7 +26,7 @@ export default function News(props) {
                 <div className="media-content">
                   <div>
                     <p className="title is-6 has-text-centered news-title">
-                      {news.title}
+                      {news.title.substring(0,50)}...
                     </p>
                   </div>
                   <div>

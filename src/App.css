@@ -24,6 +24,8 @@
 .card-content .media .media-content .news-title {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;;
   font-size: 12px;
+  position: absolute;
+  bottom: 110px;
 }
 
 .div-news-cards {
@@ -65,9 +67,7 @@ input.input.search-bar {
 
 .read-more {
   min-width: 300px;
-  /* min-height: 45px; */
   position: absolute;
-  /* margin-top: 45px; */
   bottom: 20px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
