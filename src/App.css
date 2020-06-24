@@ -22,8 +22,8 @@
 }
 
 .card-content .media .media-content .news-title {
-  font-family: "Roboto,RobotoDraft,Helvetica,Arial,sans-serif";
-  font-size: 15px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;;
+  font-size: 12px;
 }
 
 .div-news-cards {
@@ -64,8 +64,12 @@ input.input.search-bar {
 }
 
 .read-more {
-  width: 200px;
-  margin-top: 45px;
+  min-width: 300px;
+  /* min-height: 45px; */
+  position: absolute;
+  /* margin-top: 45px; */
+  bottom: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .news-date {
@@ -116,7 +120,7 @@ input.input.search-bar {
   margin-left: 50px;
   margin-bottom: 5px;
   margin-top: 50px;
-  font-family: "Roboto,RobotoDraft,Helvetica,Arial,sans-serif";
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;;
   font-size: small;
 }
 
