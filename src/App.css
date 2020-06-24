@@ -108,7 +108,7 @@ input.input.search-bar {
 
 .beers {
   width: 100%;
-  max-height: 250px;
+  max-height: 200px;
   margin-top: 0px;
 }
 
@@ -293,6 +293,12 @@ input.input.search-bar {
     position: absolute;
     bottom: 10px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+  .beers {
+    width: 100%;
+    max-height: 200px;
+    margin-top: 0px;
   }
 }
 
