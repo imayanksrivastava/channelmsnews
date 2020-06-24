@@ -36,7 +36,7 @@ export default function News(props) {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        {news.author}[+]
+                        Read More
                       </a>
                     </div>
                       <PublishedAt publishedDate = {news.published}
