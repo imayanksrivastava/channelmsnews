@@ -37,7 +37,7 @@ export default function News(props) {
                         rel="noopener noreferrer"
                       >
                         Read More
-                      </a> <p>{news.author}</p>
+                      </a>
                       <PublishedAt publishedDate = {news.published}
                       />
                     </div>
