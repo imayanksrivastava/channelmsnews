@@ -6,7 +6,6 @@
   font-weight: bold;
   margin-left: 1%;
   font-family: Trebuchet MS;
-  margin-top: 14px;
 }
 
 .clockLoader {
@@ -22,9 +21,8 @@
 }
 
 .card-content .media .media-content .news-title {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 12px;
-  position: absolute;
   bottom: 110px;
 }
 
@@ -33,7 +31,6 @@
 }
 
 .search-bar {
-  position: absolute;
   top: 115px;
   left: 15px;
 }
@@ -55,14 +52,10 @@ input.input.search-bar {
 .clock {
   background-color: #123c69;
   display: flex;
-  flex-direction: row-reverse;
-  padding-right: 1%;
   font-size: 15px;
   font-family: Trebuchet MS;
   font-weight: bold;
   color: white;
-  margin-top: 14px;
-  flex-basis: auto;
 }
 
 .read-more {
@@ -120,7 +113,7 @@ input.input.search-bar {
   margin-left: 50px;
   margin-bottom: 5px;
   margin-top: 50px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: small;
 }
 
@@ -141,68 +134,88 @@ input.input.search-bar {
   margin-top: 0px;
 }
 
+
+
+.weather {
+  color: white;
+  font-size: 15px;
+  font-family: Trebuchet MS;
+}
+
+.region{
+  font-size: 15px;
+  font-family: Trebuchet MS;
+  font-weight: bold;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-left {
+  width: 470px;
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+  justify-content: center;
+}
+
+.nav-right {
+  width: 440px;
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+
 .vl {
-  /* position: absolute; */
   border-left: 2px solid whitesmoke;
-  height: 34px;
-  left: 16%;
-  margin-left: 5px;
-  top: 20px;
+  min-width: 20px;
+  margin-left: 10px; 
 }
 
 .vl1 {
   border-left: 2px solid whitesmoke;
-  height: 34px;
-  /* position: absolute; */
-  left: 88.3%;
-  margin-left: auto;
-  top: 20px;
+  min-width: 20px;
+  margin-left: 20px;
 }
 
-.weather {
-  color: white;
-  position: absolute;
-  margin-left: -15px;
-  left: 18%;
-  font-size: 15px;
-  font-family: Trebuchet MS;
-  font-weight: bold;
-  margin-top: 6px;
-  margin-left: 1px;
-}
-
-.region{
-  position: absolute;
-  margin-left: -15px;
-  left: 77%;
-  font-size: 15px;
-  font-family: Trebuchet MS;
-  font-weight: bold;
-  margin-top: 6px;
-}
-
-/* @media screen and (min-width: 500px) {
-  body {
-    width: 420px
-  }
-} */
-
-
-
-
-
-/* Media Query for Mobile and Tablet */
-@media screen and (max-width: 411px)
+/* Media Query for Mobile */
+@media screen and (max-width: 375px)
 {
+  .nav-items {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .nav-left {
+    width: 470px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    justify-content: center;
+  }
+  
+  .nav-right {
+    width: 440px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
   .weather {
     color: white;
-    position: absolute;
-    margin-left: 25px;
-    margin-top: 5px;
-    left: 52%;
+    margin-left: 1px;
+    left: 50%;
     font-size: 15px;
     font-family: Trebuchet MS;
     font-weight: bold;
+
   }
 
   .short-app-name {
@@ -211,17 +224,17 @@ input.input.search-bar {
     font-size: 30px;
     color: white;
     font-weight: bold;
-    margin-left: 15%;
+    /* margin-left: 25%; */
     font-family: Trebuchet MS;
-    margin-top: 10px;
   }
   .smallClock {
     display: inline-block;
     color: white;
     font-family: Trebuchet MS;
-    margin-left: 2%;
+    margin-left: 1%;
     font-size: 15px;
     font-weight: bold;
+    margin-top: 10px;
   }
 
   .app-name {
@@ -233,11 +246,9 @@ input.input.search-bar {
   }
 
   .search-bar {
-    /* min-height: 10px; */
-    /* position: absolute; */
-    margin-top: 1px;
-    left: 180px;
-    top: 95px
+    /* margin-top: 1px; */
+    left: 100px;
+    top: 20px
   }
   input.input.search-bar {
     height: 29px;
@@ -257,7 +268,6 @@ input.input.search-bar {
   .vl {
     border-left: 2px solid whitesmoke;
     height: 34px;
-    position: absolute;
     left: 16%;
     margin-left: -3px;
     top: 10;
@@ -270,16 +280,7 @@ input.input.search-bar {
   .vl {
     display: none;
   }
-
-  .region{
-    position: absolute;
-    margin-left: 1px;
-    left: 1%;
-    font-size: 15px;
-    font-family: Trebuchet MS;
-    font-weight: bold;
-    margin-top: 40px;
-  }
+  
 
   .card-content .media .media-content .news-title {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;;
@@ -302,151 +303,122 @@ input.input.search-bar {
   }
 }
 
-/* @media screen and (max-width: 768px) {
-  .vl1 {
-    display: none;
+@media screen and (max-width: 600px)
+{
+  .nav-items {
+    display: flex;
+    justify-content: space-between;
   }
+  
+  .nav-left {
+    width: 470px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
 
-  .vl {
-    display: none;
   }
-
-  .region{
-    position: absolute;
-    margin-left: 1px;
-    left:1%;
-    font-size: 15px;
-    font-family: Trebuchet MS;
-    font-weight: bold;
-    margin-top: 40px;
-  }
-
-
-} */
-/* 
-@media screen and (min-width: 500px) {
-  .vl1 {
-    border-left: 2px solid whitesmoke;
-    height: 34px;
-    position: absolute;
-    left: 16%;
-    margin-left: 62%;
-    top: 10;
-  }
-
-  .vl {
-    border-left: 2px solid whitesmoke;
-    height: 34px;
-    position: absolute;
-    left: 16%;
-    margin-left: 12%;
-    top: 10;
+  
+  .nav-right {
+    width: 440px;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
   }
 
   .weather {
     color: white;
-    position: absolute;
-    margin-left: 25px;
-    margin-top: 5px;
-    left: 52%;
+    margin-left: 1px;
+    left: 50%;
     font-size: 15px;
     font-family: Trebuchet MS;
     font-weight: bold;
+
   }
-} */
+
+  .short-app-name {
+    display: inline-block;
+    background-color: #123c69;
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    font-family: Trebuchet MS;
+  }
+  .smallClock {
+    display: inline-block;
+    color: white;
+    font-family: Trebuchet MS;
+    margin-left: 1%;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  .app-name {
+    display: none;
+  }
+
+  .clock {
+    display: none;
+  }
+
+  .search-bar {
+    left: 100px;
+    top: 20px
+  }
+  input.input.search-bar {
+    height: 29px;
+    width: 50%;
+  }
+
+  .card {
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 320px;
+    height: 350px;
+    margin-top: 70px
+  }
+  .div-menu-item {
+    display: none;
+  }
+  .vl {
+    border-left: 2px solid whitesmoke;
+    height: 34px;
+    left: 16%;
+    margin-left: -3px;
+    top: 10;
+  }
+
+  .vl1 {
+    display: none;
+  }
+
+  .vl {
+    display: none;
+  }
+  
+  .card-content .media .media-content .news-title {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;;
+    font-size: 12px;
+    position: absolute;
+    bottom: 80px;
+  }
+
+  .read-more {
+    min-width: 300px;
+    position: absolute;
+    bottom: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+  .beers {
+    width: 100%;
+    max-height: 200px;
+    margin-top: 0px;
+  }
+}
 
 
-/* Iphone 5
-
-/* Portrait and Landscape */
-/* @media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-    .weather {
-      color: white;
-      position: absolute;
-      margin-left: 20px;
-      margin-top: 5px;
-      left: 54%;
-      font-size: 12px;
-      font-family: Trebuchet MS;
-      font-weight: bold;
-    }
-  
-    .short-app-name {
-      display: inline-block;
-      background-color: #123c69;
-      font-size: 30px;
-      color: white;
-      font-weight: bold;
-      margin-left: 8%;
-      font-family: Trebuchet MS;
-      margin-top: 10px;
-    }
-    .smallClock {
-      display: inline-block;
-      color: white;
-      font-family: Trebuchet MS;
-      margin-left: 2%;
-      font-size: 12px;
-      font-weight: bold;
-    }
-  
-    .app-name {
-      display: none;
-    }
-  
-    .clock {
-      display: none;
-    }
-  
-    .search-bar {
-      position: absolute;
-      top: 96px;
-      left: 180px;
-    }
-    input.input.search-bar {
-      height: 29px;
-      width: 40%;
-    }
-  
-    .card {
-      padding-left: 20px;
-      padding-right: 0px;
-      width: 300px;
-      height: auto;
-      margin-top: 70px;
-      margin-left: 10px;
-    }
-    .div-menu-item {
-      display: none;
-    }
-    .vl {
-      border-left: 2px solid whitesmoke;
-      height: 34px;
-      position: absolute;
-      left: 16%;
-      margin-left: -3px;
-      top: 10;
-    }
-  
-    .vl1 {
-      display: none;
-    }
-  
-    .vl {
-      display: none;
-    }
-  
-    .region{
-      position: absolute;
-      margin-left: 1px;
-      left: 1%;
-      font-size: 15px;
-      font-family: Trebuchet MS;
-      font-weight: bold;
-      margin-top: 40px;
-    }
-
-}  */
