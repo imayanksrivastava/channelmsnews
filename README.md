@@ -6,7 +6,7 @@ Channel MS News is a News aggregator web application built on the News informati
 
 Channel MS News is a FullStack application built using MERN (MongoDB, Express, ReactJS, NodeJS) Stack. The application brings news from the 100K plus sources for most of the countries in the world. The application has been built using the free developer edition of the CurrentsAPI. 
 
-Major Features of the application are: 
+# Major Features 
 
 * Weather for the location selected by the user - OpenWeatherAPI
 * Local time 
@@ -14,7 +14,12 @@ Major Features of the application are:
 * Account Sign-up and Authentication 
 * Access to the News in detail post Account authentication. 
 
+# News Update Frequency
 
+News is updated real-time for all major locations. For some locations there might be lag for couple of hours. This is completely dependent on the API.
+
+
+# News Categories 
 Following are the categories of the news which are part of the ChannelMS News app:
 
 * Trending News 
@@ -24,3 +29,5 @@ Following are the categories of the news which are part of the ChannelMS News ap
 * Science 
 * Health
 * Movies
+
+# Benfits of making Account
