@@ -31,3 +31,17 @@ Following are the categories of the news which are part of the ChannelMS News ap
 * Movies
 
 # Benfits of making Account
+ The user can access the page and all categories of news without making an account. However if the user wants to access the details of the news by clicking the "Read More" hyperlink on each of the news cards, the user has to create an account with the Channel page. 
+
+# What did I learn? 
+
+* Basics of React - How to make a complete React App
+* Managing and lifting the state 
+* React State Lifecyles - Importance of ComponentDidMount and ComponentDidUpdate
+* Search Functionality 
+* Integrating an API with React
+* Styling the page with CSS
+* Backend Authentication with Node and Express and MongoDB
+* React Router
+* How to add a loading spinner in the React App while API fetches the data
+* Use of Moment.js to play with Dates.
