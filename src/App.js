@@ -112,7 +112,7 @@ export default class App extends Component {
               </div>
             </div>
         </div>
-        <Search onSearchSubmit={this.userSearch} />
+        
         <Switch>
           <Route exact path="/">
             <News news={this.state.news} isLoading={this.state.isLoading} />
@@ -126,6 +126,7 @@ export default class App extends Component {
           <Route path="/myaccount" component={MyAccount} />
         </Switch>
         <div>
+          <Search  onSearchSubmit={this.userSearch} />
           <SideMenu newsCategory={this.getdatabyCategory} />
         </div>
       </div>
