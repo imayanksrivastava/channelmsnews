@@ -184,6 +184,7 @@ input.input.search-bar {
 form {
   max-width: 500px;
   width: 100%;
+  margin-top: 200px;
   margin: 0 auto;
 }
 
