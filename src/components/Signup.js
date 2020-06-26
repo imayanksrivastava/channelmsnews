@@ -67,9 +67,9 @@ class Signup extends React.Component {
                     type="password"
                     name="password"
                     placeholder="Enter password"
-                    className={`form-control ${
+                    className={` btn-cms form-control ${
                       touched.password && errors.password ? "is-invalid" : ""
-                    }`, "btn-cms"}
+                    }`}
                   />
                   <ErrorMessage
                     component="div"
