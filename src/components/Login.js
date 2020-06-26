@@ -68,7 +68,7 @@ class Login extends React.Component {
                                     placeholder="Enter password"
                                     className={`form-control ${
                                         touched.password && errors.password ? "is-invalid" : ""
-                                        }`}
+                                        }`, "btn-cms"}
                                 />
                                 <ErrorMessage
                                     component="div"
