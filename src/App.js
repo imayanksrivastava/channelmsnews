@@ -1,26 +1,32 @@
 import React, { Component } from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, withRouter} from "react-router-dom";
 
 import "./App.css";
 import Clock from "./components/clock";
 import Date from "./components/date";
-import Category from "./components/Category";
-import MyAccount from "./components/MyAccount";
+// import Category from "./components/Category";
+// import MyAccount from "./components/MyAccount";
 import Search from "./components/Search";
 import SideMenu from "./components/sidemenu";
 import newsApi from "./apis/newsApi";
 import Weather from "./components/defaultWeather";
 import News from "./components/News";
 import Regions from "./components/Region";
+import Login from "./components/Login";
+import Signup from "./components/Signup";
 
 import "bulma/css/bulma.css";
+import {login, logout} from "./utils";
+// import Signout from "./components/Signout";
 
-export default class App extends Component {
+
+class App extends Component {
   state = {
     news: [],
     selectedRegion: "US",
     selectedCategory: "BreakingNews",
     isLoading: true,
+    authToken: "",
   };
 
   componentDidMount = () => {
@@ -82,54 +88,103 @@ export default class App extends Component {
     });
   };
 
+  onLoginSubmit = (userData) => {
+    let tokens = userData.tokens;
+    let latestToken = tokens[tokens.length - 1].token;
+    this.setState({ authToken: latestToken });
+    login(latestToken);
+    this.props.history.push('/');
+  }
+
+  onsignupSubmit = (token) => {
+    this.setState({ authToken: token });
+    login(token);
+    this.props.history.push('/');
+  }
+
+  onLogoutSubmit = (e) => {
+    e.preventDefault();
+    this.setState({ authToken: '' });
+    logout();
+    this.props.history.push('/');
+  }
+
+
   render() {
     return (
       <div>
         <div className="App-header nav-items">
-            <div className="level nav-left">
-              <div className="level-left app-name">CHANNEL MS NEWS</div>
-              
-              <div>
-                <span className="short-app-name">C M S NEWS</span>
-              </div>
-              <div className="vl"></div>
-              <div className="weather">
-                <Weather />
-              </div>
+          <div className="level nav-left">
+            <div className="level-left app-name">CHANNEL MS NEWS</div>
+
+            <div>
+              <span className="short-app-name">C M S NEWS</span>
+            </div>
+            <div className="vl"></div>
+            <div className="weather">
+              <Weather />
+            </div>
+          </div>
+
+          <div className="nav-right">
+            <div className="region">
+              <Regions userRegion={this.userRegion} />
+            </div>
+            <div className="vl1"></div>
+            <div className="level-right clock">
+              <Clock />
             </div>
 
-            <div className="nav-right">
-              <div className="region">
-                <Regions userRegion={this.userRegion} />
-              </div>
-              <div className="vl1"></div>
-              <div className="level-right clock">
-                <Clock />
-              </div>
-              
-              <div className="smallClock">
-                <Date />
-              </div>
+            <div className="smallClock">
+              <Date />
             </div>
+          </div>
         </div>
-        
         <Switch>
-          <Route exact path="/">
-            <News news={this.state.news} isLoading={this.state.isLoading} />
-          </Route>
-          <Route
+          <Route exact path="/" component={this.DefaultContainer} />
+          {/* <Route exact path="/">
+            <News
+              news={this.state.news}
+              isLoading={this.state.isLoading}
+              isAuth={this.state.authToken}
+            />
+          </Route> */}
+          {/* <Route
             path="/category/:CategoryName"
             render={(props) => (
               <Category {...props} selectedRegion={this.state.selectedRegion} />
             )}
-          />
-          <Route path="/myaccount" component={MyAccount} />
+          /> */}
+
+          {/* <Route path="/login" component={Login} /> */}
+          <Route path="/login" render={(props) => <Login {...props} onLoginSubmit={this.onLoginSubmit} />} />
+          <Route path="/signup" render={(props) => <Signup {...props} onsignupSubmit={this.onsignupSubmit} />} />
+          {/* <Route path="/myaccount" component={MyAccount} /> */}
+          <a href="/" onClick ={this.onLogoutSubmit}>Sign Out</a>
         </Switch>
-        <div>
-          <Search  onSearchSubmit={this.userSearch} />
-          <SideMenu newsCategory={this.getdatabyCategory} />
-        </div>
       </div>
     );
   }
+  DefaultContainer = () => (
+    <div>
+      <Route exact path="/">
+        <News
+          news={this.state.news}
+          isLoading={this.state.isLoading}
+          isAuth={this.state.authToken}
+        />
+      </Route>
+      <div>
+        <Search onSearchSubmit={this.userSearch} />
+        <SideMenu
+          newsCategory={this.getdatabyCategory}
+          onLogoutSubmit = {this.onLogoutSubmit}
+          isAuth={this.state.authToken}
+        />
+      </div>
+    </div>
+  );
 }
+
+
+export default withRouter(App);

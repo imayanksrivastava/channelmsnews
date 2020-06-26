@@ -8,13 +8,19 @@ export default function sidemenu(props) {
         <p className="menu-label">General</p>
         <ul className="menu-list">
           <li>
-          <a href="BreakingNews" onClick ={props.newsCategory}>#TrendingNews</a>
+            <a href="BreakingNews" onClick={props.newsCategory}>
+              #TrendingNews
+            </a>
           </li>
           <li>
-          <a href="covid-19" onClick ={props.newsCategory}>#COVD19</a> 
+            <a href="covid-19" onClick={props.newsCategory}>
+              #COVD19
+            </a>
           </li>
           <li>
-          <a href="blacklivesmatter" onClick ={props.newsCategory}>#BlackLivesMatter</a> 
+            <a href="blacklivesmatter" onClick={props.newsCategory}>
+              #BlackLivesMatter
+            </a>
           </li>
         </ul>
         <p className="menu-label">Categories</p>
@@ -28,8 +34,9 @@ export default function sidemenu(props) {
             >
               Business
             </Link> */}
-            <a href="business" onClick ={props.newsCategory}>Business</a>
-
+            <a href="business" onClick={props.newsCategory}>
+              Business
+            </a>
           </li>
           <li>
             {/* <Link
@@ -40,7 +47,9 @@ export default function sidemenu(props) {
             >
               Sports
             </Link> */}
-            <a href="sports" onClick ={props.newsCategory}>Sports</a>
+            <a href="sports" onClick={props.newsCategory}>
+              Sports
+            </a>
           </li>
           {/* <li>
             <Link 
@@ -49,7 +58,9 @@ export default function sidemenu(props) {
                 state: {fromNav: true},
             }}>Technology</Link>
           </li> */}
-          <a href="technology" onClick ={props.newsCategory}>Technology</a>
+          <a href="technology" onClick={props.newsCategory}>
+            Technology
+          </a>
           {/* <li>
             <Link 
               to={{
@@ -58,7 +69,9 @@ export default function sidemenu(props) {
             }}
               >Science</Link>
           </li> */}
-          <a href="science" onClick ={props.newsCategory}>Science</a>
+          <a href="science" onClick={props.newsCategory}>
+            Science
+          </a>
           {/* <li>
             <Link 
               to={{
@@ -66,7 +79,9 @@ export default function sidemenu(props) {
                 state: {fromNav: true},
             }}>Health</Link>
           </li> */}
-          <a href="health" onClick ={props.newsCategory}>Health</a>
+          <a href="health" onClick={props.newsCategory}>
+            Health
+          </a>
           {/* <li>
             <Link 
               to={{
@@ -74,16 +89,32 @@ export default function sidemenu(props) {
                 state: {fromNav: true},
             }}>Movies</Link>
           </li> */}
-          <a href="movies" onClick ={props.newsCategory}>Movies</a>
+          <a href="movies" onClick={props.newsCategory}>
+            Movies
+          </a>
         </ul>
         <p className="menu-label">Settings</p>
         <ul className="menu-list">
-          <li>
-            <Link to="/myaccount">My Account</Link>
-          </li>
-          <li>
-            <a href="/">Sign Out</a>
-          </li>
+         {(props.isAuth)?
+            <div>
+            <li>
+              {/* <Link to="/myaccount">My Account</Link> */}
+            </li>
+            <li>
+            <a href="/" onClick ={props.onLogoutSubmit}>Sign Out</a>
+            </li>
+            </div>
+          
+          :
+            <div>
+            <li>
+              <Link to="/login">Login</Link>
+            </li>
+            <li>
+              <Link to="/signup">Sign Up</Link>
+            </li>
+            </div>
+         } 
         </ul>
       </aside>
     </div>
