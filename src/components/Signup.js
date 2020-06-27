@@ -83,7 +83,8 @@ class Signup extends React.Component {
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? "Please wait..." : "Signup"}
-                  </button>
+                  </button> 
+                  <span><a href ="/"> Login </a></span><a href ="/"> | Back to Home </a>
                 </Form>
               )}
             </Formik>
