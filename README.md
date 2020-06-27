@@ -50,3 +50,4 @@ Following are the categories of the news which are part of the ChannelMS News ap
 * More usability of Account Feature
 * Sentimental Analysis of news and categorization into Positive, Neutral and Negative 
 * Use of Redux for State management
+* Fake News Check
