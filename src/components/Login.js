@@ -83,7 +83,7 @@ class Login extends React.Component {
                                     disabled={isSubmitting}
                                 >
                                     {isSubmitting ? "Please wait..." : "Submit"}
-                                </button> <a href ="/signup"> Create Account </a> <a href ="/"> | Back to Home </a>
+                                </button> <a href ="/">Back to Home </a>
                             </Form>
                         )}
                 </Formik>
