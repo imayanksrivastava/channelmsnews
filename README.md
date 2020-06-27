@@ -44,3 +44,9 @@ Following are the categories of the news which are part of the ChannelMS News ap
 * React Router
 * How to add a loading spinner in the React App while API fetches the data
 * Use of Moment.js to play with Dates.
+
+# Upcoming Features
+
+* More usability of Account Feature
+* Sentimental Analysis of news and categorization into Positive, Neutral and Negative 
+* Use of Redux for State management
