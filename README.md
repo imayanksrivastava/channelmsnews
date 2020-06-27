@@ -54,3 +54,4 @@ Following are the categories of the news which are part of the ChannelMS News ap
 * Use of Redux for State management
 * Fake News Check
 * More features for mobile version
+* Weather and Time to be updated for the region selected by the user.
