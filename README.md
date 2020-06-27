@@ -1,5 +1,7 @@
 Channel MS News is a News aggregator web application built on the News information from CurrentAPI. It is a developer edition and is not being used for any commercial activities. The application has been built for my Final project submission at IronHack for the FullStack Web Development Program. 
 
+Intent of this app is to present the news as just a news and not force down the opinion. Let the reader form an opinion himself. And the news is more than hatred, wars, geo political conflicts. 
+
 ![Render Clock Demo](demo/demo.gif)
 
 
@@ -51,3 +53,4 @@ Following are the categories of the news which are part of the ChannelMS News ap
 * Sentimental Analysis of news and categorization into Positive, Neutral and Negative 
 * Use of Redux for State management
 * Fake News Check
+* More features for mobile version
